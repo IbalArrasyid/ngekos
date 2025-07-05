@@ -13,6 +13,7 @@ class Testimonial extends Model
     protected $fillable = [
         'boarding_house_id',
         'photo',
+        'name',
         'content',
         'rating',
     ];
@@ -20,13 +21,5 @@ class Testimonial extends Model
     public function boardingHouse()
     {
         return $this->belongsTo(BoardingHouse::class);
-    }
-
-    /**
-     * Get the route key for the model.
-     */
-    public function getRouteKeyName(): string
-    {
-        return 'slug';
     }
 }
